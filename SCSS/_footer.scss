@@ -1,0 +1,34 @@
+@import 'variables';
+
+.footer {
+  background-color: $footer-bg-color;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &-left,
+  &-center,
+  &-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  &-email {
+    margin-left: 10px;
+  }
+
+  .social-icon {
+    margin-left: 10px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

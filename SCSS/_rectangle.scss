@@ -1,0 +1,27 @@
+@import 'variables';
+
+.rectangulo {
+  background-color: $rectangle-bg-color;
+  padding: 20px;
+  margin: 100px 25% 50px;
+
+  .contenido-rectangulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .texto {
+      flex: 1;
+
+      p {
+        max-width: 100%;
+        margin-bottom: 25px;
+      }
+    }
+
+    .btn {
+      width: 150px;
+      margin-top: 10px;
+    }
+  }
+}

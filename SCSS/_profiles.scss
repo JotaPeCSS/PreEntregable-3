@@ -1,0 +1,22 @@
+.Perfil {
+    display: flex;
+    align-items: center;
+  
+    &-img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .btn-linkedin {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  
+  .separador {
+    width: 80%;
+    height: 1px;
+    background-color: black;
+    margin: 20px auto;
+  }
+  

@@ -1,0 +1,38 @@
+.texto-h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: calc(100% - 600px);
+    position: relative;
+    font-weight: bold;
+  
+    h3 {
+      z-index: 1;
+      margin-top: 45px;
+      font-weight: bold;
+    }
+  
+    .linea-lateral {
+      height: 1px;
+      background-color: black;
+      width: calc(50% - 120px);
+      margin-top: 0.5em;
+      position: absolute;
+  
+      &.izquierda {
+        left: 0;
+      }
+  
+      &.derecha {
+        right: 0;
+      }
+    }
+  }
+  
+  .parrafo-centrado {
+    text-align: left;
+    margin: 0 auto 50px;
+    max-width: 800px;
+  }
+  

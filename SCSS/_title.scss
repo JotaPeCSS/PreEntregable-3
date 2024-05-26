@@ -1,0 +1,19 @@
+@import 'variables';
+
+.titulo-H {
+  display: flex;
+  align-items: center;
+  margin: 30px 200px 50px;
+
+  h2 {
+    margin-top: 25px;
+    margin-right: auto;
+    font-weight: bold;
+  }
+
+  .linea-horizontal-derecha {
+    flex-grow: 1;
+    border-top: 1px solid black;
+    margin-left: 80px;
+  }
+}
