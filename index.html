@@ -1,3 +1,5 @@
+Entendido, aquí tienes el código HTML actualizado aplicando la animación
+.slide-top solo a los párrafos: html Copiar código
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -70,8 +72,8 @@
 
       <section class="contenido-detalle">
         <img src="./images/imagen_1.jpg" alt="Imagen-1" />
-        <div class="texto">
-          <p>
+        <div>
+          <p class="slide-top">
             En HoneyPot Studio, somos mucho más que una empresa de diseño
             digital. Somos una pareja apasionada que fusiona creatividad y
             tecnología para dar vida a proyectos únicos y emocionantes. Desde el
@@ -79,7 +81,7 @@
             una oportunidad para desatar nuestra imaginación y ofrecer
             resultados sorprendentes.
           </p>
-          <a href="./html/galeria.html" class="btn-orange">Ir a Galería</a>
+          <a href="./html/galeria.html" class="btn-orange">Ver Galería</a>
         </div>
       </section>
 
@@ -134,5 +136,18 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        var threshold = window.innerHeight * 0.7; // Porcentaje de la altura de la ventana visible
+        var section = document.querySelector("section.contenido-detalle");
+
+        if (section.getBoundingClientRect().top < threshold) {
+          var paragraph = section.querySelector("p.slide-top");
+          if (paragraph) {
+            paragraph.classList.add("active");
+          }
+        }
+      });
+    </script>
   </body>
 </html>

@@ -46,7 +46,7 @@ body {
 .navbar .btn.navbar-btn {
   background-color: orange;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   border-radius: 5px;
   margin: 0 10px;
@@ -111,6 +111,7 @@ body {
   height: 300px;
   object-fit: cover;
   margin-right: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 .galeria-imagenes img:last-child {
   margin-right: 0;
@@ -126,6 +127,11 @@ body {
   flex: 1;
   max-width: 50%;
   margin: 0 15px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 .contenido-detalle .texto {
   flex: 1;
@@ -137,10 +143,11 @@ body {
 
 .btn-orange {
   width: 160px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background-color: orange;
   color: white;
   border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
@@ -188,6 +195,7 @@ body {
   background-color: #ccc;
   padding: 20px;
   margin: 100px 25% 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .rectangulo .contenido-rectangulo {
   display: flex;
@@ -209,7 +217,13 @@ body {
 .img-container img {
   max-width: 100%;
   margin: 0 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+  transform: scale(1.02);
 }
 
 .footer {
@@ -219,7 +233,9 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.footer-left, .footer-center, .footer-right {
+.footer-left,
+.footer-center,
+.footer-right {
   display: flex;
   align-items: center;
 }
@@ -341,6 +357,27 @@ body {
     max-width: 100%;
     height: auto;
   }
+}
+
+.slide-top {
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  transform: translateY(-50px); /* Posición inicial más alta */
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.slide-top.active {
+  /* Propiedades adicionales o ajustes necesarios para activar la animación */
+  transform: translateY(
+    0
+  ); /* Ajuste para llevar el elemento a su posición final */
 }
 
 /*# sourceMappingURL=style.css.map */

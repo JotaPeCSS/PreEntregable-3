@@ -1,22 +1,26 @@
 .contenido-detalle {
-    display: flex;
-    align-items: center;
-    margin: 100px auto;
-    max-width: 800px;
-  
-    img {
-      flex: 1;
-      max-width: 50%;
-      margin: 0 15px;
-    }
-  
-    .texto {
-      flex: 1;
-      margin-left: 20px;
-  
-      p {
-        margin: 20px 0;
-      }
+  display: flex;
+  align-items: center;
+  margin: 100px auto;
+  max-width: 800px;
+
+  img {
+    flex: 1;
+    max-width: 50%;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
     }
   }
-  
+
+  .texto {
+    flex: 1;
+    margin-left: 20px;
+
+    p {
+      margin: 20px 0;
+    }
+  }
+}

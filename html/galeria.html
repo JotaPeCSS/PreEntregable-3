@@ -7,24 +7,20 @@
     <link rel="stylesheet" href="../CSS/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <!-- Slick Carousel CSS -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <!-- Custom CSS -->
     <style>
       .slick-slide img {
@@ -51,13 +47,13 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 fixed-top">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light w-100 fixed-top">
         <a class="navbar-brand" href="../index.html">
           <img
             src="../images/Logos/ElPot_Logotipo.png"
             alt="Logo de HoneyPot Studio"
-            height="40"
-          />
+            height="40" />
         </a>
         <button
           class="navbar-toggler"
@@ -66,14 +62,12 @@
           data-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
           class="collapse navbar-collapse justify-content-between"
-          id="navbarNav"
-        >
+          id="navbarNav">
           <ul class="navbar-nav m-auto">
             <li class="nav-item">
               <a class="nav-link" href="../html/galeria.html">Galería</a>
@@ -104,7 +98,7 @@
 
     <section>
       <div class="parrafo-centrado">
-        <p>
+        <p class="slide-top">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus
           temporibus rerum earum vel cumque, autem itaque esse voluptas officia
           perferendis nulla commodi! Aut voluptatum modi odio quisquam? Facere,
@@ -119,20 +113,17 @@
         <div>
           <img
             src="../images/Imagenes_galeria/imagen_galeria_1.jpg"
-            alt="Imagen de la galería 1"
-          />
+            alt="Imagen de la galería 1" />
         </div>
         <div>
           <img
             src="../images/Imagenes_galeria/imagen_galeria_2.jpg"
-            alt="Imagen de la galería 2"
-          />
+            alt="Imagen de la galería 2" />
         </div>
         <div>
           <img
             src="../images/Imagenes_galeria/imagen_galeria_3.jpg"
-            alt="Imagen de la galería 3"
-          />
+            alt="Imagen de la galería 3" />
         </div>
       </div>
     </section>
@@ -146,7 +137,7 @@
     <section class="rectangulo">
       <div class="contenido-rectangulo">
         <div class="texto">
-          <p>
+          <p class="slide-top">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
             molestiae assumenda eum ab unde odit, possimus ullam animi id, aut
             sunt minus exercitationem laborum incidunt voluptates enim velit?
@@ -165,8 +156,7 @@
         <img
           src="../images/Logos/logo.png"
           alt="Logo de la empresa"
-          class="footer-logo"
-        />
+          class="footer-logo" />
         <a href="mailto:correo@empresa.com" class="footer-email"
           >correo@empresa.com</a
         >
@@ -188,6 +178,19 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      window.addEventListener('scroll', function() {
+        var threshold = window.innerHeight * 0.7; // Porcentaje de la altura de la ventana visible
+        var section = document.querySelector('section.contenido-detalle');
+    
+        if (section.getBoundingClientRect().top < threshold) {
+          var paragraph = section.querySelector('p.slide-top');
+          if (paragraph) {
+            paragraph.classList.add('active');
+          }
+        }
+      });
+    </script>
     <!-- Slick Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>

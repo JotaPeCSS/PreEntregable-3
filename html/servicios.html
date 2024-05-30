@@ -68,7 +68,7 @@
       <section class="contenido-detalle">
         <img src="../images/imagen_1.jpg" alt="Imagen-1" />
         <div class="texto">
-          <p>
+          <p class="slide-top">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Temporibus, soluta, in voluptatibus, impedit libero optio hic
             adipisci natus doloribus sunt quibusdam sequi maiores est! Aut et
@@ -80,7 +80,7 @@
 
       <section class="contenido-detalle">
         <div class="texto">
-          <p>
+          <p class="slide-top">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus ut ullam dignissimos provident quos, porro delectus
             commodi eveniet officia ducimus rem alias itaque tempora harum! Enim
@@ -99,7 +99,7 @@
       <section class="rectangulo">
         <div class="contenido-rectangulo">
           <div class="texto">
-            <p>
+            <p class="slide-top">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
               molestiae assumenda eum ab unde odit, possimus ullam animi id, aut
               sunt minus exercitationem laborum incidunt voluptates enim velit?
@@ -141,5 +141,18 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      window.addEventListener('scroll', function() {
+        var threshold = window.innerHeight * 0.7; // Porcentaje de la altura de la ventana visible
+        var section = document.querySelector('section.contenido-detalle');
+    
+        if (section.getBoundingClientRect().top < threshold) {
+          var paragraph = section.querySelector('p.slide-top');
+          if (paragraph) {
+            paragraph.classList.add('active');
+          }
+        }
+      });
+    </script>
   </body>
 </html>
