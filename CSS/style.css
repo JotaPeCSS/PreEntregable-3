@@ -128,10 +128,9 @@ body {
   max-width: 50%;
   margin: 0 15px;
   transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.02);
-  }
+}
+.contenido-detalle img:hover {
+  transform: scale(1.02);
 }
 .contenido-detalle .texto {
   flex: 1;
@@ -264,7 +263,6 @@ body {
   height: 30px;
 }
 
-
 .contact-container {
   background-color: #f0f0f0;
   padding: 30px;
@@ -319,6 +317,28 @@ body {
 
 .carousel-container {
   max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-carousel div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-carousel img {
+  max-width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -386,9 +406,7 @@ body {
 
 .slide-top.active {
   /* Propiedades adicionales o ajustes necesarios para activar la animación */
-  transform: translateY(
-    0
-  ); /* Ajuste para llevar el elemento a su posición final */
+  transform: translateY(0); /* Ajuste para llevar el elemento a su posición final */
 }
 
 /*# sourceMappingURL=style.css.map */
