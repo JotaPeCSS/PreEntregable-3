@@ -1,16 +1,14 @@
-@import 'variables';
-
+/* Rectangle */
 .rectangulo {
-  background-color: $rectangle-bg-color;
+  background-color: #ccc;
   padding: 20px;
-  margin: 100px 25% 50px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 4);
-
+  margin: 100px 25% 50px; /* Ajusta el margen según tus necesidades */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   .contenido-rectangulo {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 
     .texto {
       flex: 1;
@@ -24,6 +22,47 @@
     .btn {
       width: 150px;
       margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+    background-color: #cccccc;
+
+    .contenido-rectangulo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      color: white;
+
+      .texto {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .btn {
+        background-color: orange;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: rgb(187, 111, 17);
+        }
+      }
+
+      .img-container {
+        text-align: center;
+        margin-top: 30px;
+
+        img {
+          margin-top: 30px;
+        }
+      }
     }
   }
 }

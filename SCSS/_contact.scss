@@ -1,38 +1,54 @@
-@import 'variables';
+@import "variables";
 
 .contact-container {
-  background-color: $contact-container-bg-color;
+  background-color: #f0f0f0;
   padding: 30px;
   border-radius: 5px;
   margin: 30px auto 45px;
   width: 35%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  label,
-  input,
-  button {
-    display: block;
-    margin-bottom: 10px;
+  @include tablet {
+    width: 80%;
   }
 
-  label {
-    font-weight: bold;
-  }
-
-  input,
-  button {
+  @include mobile {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    max-width: 250px;
   }
+}
 
-  button {
-    background-color: $btn-bg-color;
-    color: white;
-    border: none;
+label,
+input,
+button {
+  display: block;
+  margin-bottom: 10px;
+}
 
-    &:hover {
-      background-color: $btn-hover-bg-color;
-    }
+label {
+  font-weight: bold;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgb(187, 111, 17);
   }
 }
