@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .titulo-H {
   display: flex;
@@ -13,7 +13,39 @@
 
   .linea-horizontal-derecha {
     flex-grow: 1;
-    border-top: 1px solid black;
+    border-top: 1px solid $black;
     margin-left: 80px;
+  }
+}
+
+.texto-h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: calc(100% - 600px);
+  position: relative;
+  font-weight: bold;
+
+  h3 {
+    z-index: 1;
+    margin-top: 45px;
+    font-weight: bold;
+  }
+
+  .linea-lateral {
+    height: 1px;
+    background-color: $grey;
+    width: calc(40% - 120px);
+    margin-top: 0.5em;
+    position: absolute;
+
+    &.izquierda {
+      left: 0;
+    }
+
+    &.derecha {
+      right: 0;
+    }
   }
 }

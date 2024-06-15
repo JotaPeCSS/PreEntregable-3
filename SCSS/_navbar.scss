@@ -1,21 +1,21 @@
-@import 'variables';
+@import "variables";
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: center !important;
-  align-items: center !important;
-  background-color: $navbar-bg-color;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-color;
   padding: 10px;
   z-index: 1000;
 
-  &-logo img {
+  .navbar-logo img {
     height: 50px;
   }
 
-  &-list {
+  .navbar-list {
     list-style-type: none;
     display: flex;
 
@@ -30,15 +30,16 @@
   }
 
   .btn.navbar-btn {
-    background-color: $btn-bg-color;
-    color: white;
-    padding: 10px 20px;
+    background-color: $orange;
+    color: $white;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     margin: 0 10px;
+    transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: $btn-hover-bg-color;
+      background-color: darken($orange, 10%);
     }
   }
 }

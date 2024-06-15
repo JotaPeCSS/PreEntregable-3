@@ -1,54 +1,43 @@
 @import "variables";
 
 .contact-container {
-  background-color: #f0f0f0;
+  background-color: $grey;
   padding: 30px;
   border-radius: 5px;
   margin: 30px auto 45px;
   width: 35%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  @include tablet {
-    width: 80%;
+  label,
+  input,
+  button {
+    display: block;
+    margin-bottom: 10px;
   }
 
-  @include mobile {
+  label {
+    font-weight: bold;
+  }
+
+  input,
+  button {
     width: 100%;
-    max-width: 250px;
+    padding: 10px;
+    border: 1px solid $grey;
+    border-radius: 5px;
   }
-}
 
-label,
-input,
-button {
-  display: block;
-  margin-bottom: 10px;
-}
+  input {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
 
-label {
-  font-weight: bold;
-}
+  button {
+    background-color: $orange;
+    color: $white;
+    cursor: pointer;
 
-input,
-button {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-input {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-button {
-  background-color: orange;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: rgb(187, 111, 17);
+    &:hover {
+      background-color: darken($orange, 10%);
+    }
   }
 }

@@ -1,18 +1,17 @@
+@keyframes slide-top {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
 .slide-top {
-  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  transform: translateY(-50px); // Posición inicial más alta
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  transform: translateY(-50px);
+}
 
-  @keyframes slide-top {
-    0% {
-      transform: translateY(-50px);
-    }
-    100% {
-      transform: translateY(-10px);
-    }
-  }
-
-  &.active {
-    // Propiedades adicionales o ajustes necesarios para activar la animación
-    transform: translateY(0); // Ajuste para llevar el elemento a su posición final
-  }
+.slide-top.active {
+  transform: translateY(0);
 }

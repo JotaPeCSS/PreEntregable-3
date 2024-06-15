@@ -1,6 +1,87 @@
-@import 'variables';
+@import "variables";
 
 @media screen and (max-width: 768px) {
+  .rectangulo {
+    padding: 50px 0;
+    background-color: $grey;
+
+    .contenido-rectangulo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      color: $white;
+
+      .texto {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .btn {
+        background-color: $orange;
+        color: $white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($orange, 10%);
+        }
+      }
+
+      .img-container {
+        text-align: center;
+        margin-top: 30px;
+
+        img {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .contenido-detalle {
+    flex-direction: column;
+    text-align: center;
+
+    img {
+      margin: 0 auto 20px;
+      max-width: 100%;
+    }
+
+    .texto {
+      margin-left: 0;
+
+      p {
+        margin: 20px 0;
+      }
+    }
+  }
+
+  .Perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .Perfil-img {
+      margin-bottom: 20px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .btn-linkedin {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-container {
+    width: 80%;
+  }
+
   .banner h1 {
     font-size: 24px;
   }
@@ -25,25 +106,47 @@
     margin: 0 5%;
   }
 
-  footer {
+  .footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      flex: 1;
+    }
+
+    .social-icon {
+      margin: 0 10px;
+    }
   }
 
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    flex: 1;
-  }
+  .Perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
-  .social-icon {
-    margin: 0 10px;
+    .Perfil-img {
+      margin-bottom: 20px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .btn-linkedin {
+      display: block;
+      margin-top: 10px;
+    }
   }
 }
 
 @media screen and (max-width: 320px) {
-  footer {
+  .contact-container {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .footer {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
@@ -51,10 +154,10 @@
 
   .galeria-imagenes {
     flex-direction: column;
-  }
 
-  .galeria-imagenes img {
-    max-width: 100%;
-    height: auto;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
